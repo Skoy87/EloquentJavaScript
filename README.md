@@ -1,20 +1,21 @@
 # EloquentJavaScript
-exercises
+function isEven (n){
+  if (n==0){
+      return 'true'
+    } else if (n==1) {
+      return 'false'
+    } else if (n<=0){
+      n=Math.abs(n)
+      return isEven(n)
+    } else {
+      n=n-2
+      return isEven(n)
+    }
+}   
 
-// Your code here.
-var text = '', a = '0', b = '#', n = '\n', size = 8, count = text.length, r = a;
-if (count % 2 == 0) {
-  r = a;
-} else {
-  r = b;
-}
-for (count; count < size; count = count + 1) {
-  if (count % 2 == 1) {
-  r = a;
-  text = text + r;
-  } else {
-  r = b;
-  text = text + r;
-  } 
-} console.log(text)
-if
+console.log(isEven(50));
+// → true
+console.log(isEven(75));
+// → false
+console.log(isEven(-2));
+// → ??
